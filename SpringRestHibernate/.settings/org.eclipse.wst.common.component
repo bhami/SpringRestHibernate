@@ -5,7 +5,7 @@
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-        <property name="context-root" value="SpringRestHibernate"/>
-        <property name="java-output-path" value="/SpringRestHibernate/target/classes"/>
+        <property name="java-output-path" value="/SpringRestHibernateCRUDAndClient/target/classes"/>
+        <property name="context-root" value="SpringRestHibernateCRUDAndClient"/>
     </wb-module>
 </project-modules>

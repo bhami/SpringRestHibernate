@@ -6,13 +6,14 @@ import java.util.Map;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import com.javainterviewpoint.model.Student;
 
 public class SpringRestTemplateClient
 {
-    public static final String REST_BASE_URI = "http://localhost:8080/SpringRestHibernate";
+    public static final String REST_BASE_URI = "http://localhost:8070/SpringRestHibernateCRUDAndClient";
    
     static RestTemplate restTemplate = new RestTemplate();
     
@@ -20,16 +21,17 @@ public class SpringRestTemplateClient
     public static void createStudent()
     {
         Student student = new Student();
-        student.setId(5);
-        student.setName("JIP");
-        student.setAge(5);
+        student.setId(6);
+        student.setName("Sami");
+        student.setAge(45);
         
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        //headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         
-        HttpEntity<Student> entity = new HttpEntity<>(student,headers);
-        restTemplate.postForObject(REST_BASE_URI+"/create", entity,Student.class);
+      HttpEntity<Student> entity = new HttpEntity<>(student,headers);
+        
+        Student result = restTemplate.postForObject(REST_BASE_URI+"/create", entity, Student.class);
+        System.out.println("name is :" +  student.getName() );
     }
     
     /**GET**/
@@ -39,6 +41,7 @@ public class SpringRestTemplateClient
         System.out.println("**** Student with id : "+id+"****");
         System.out.println("Id :"+student.getId()+"    Name : "+student.getName()+"   Age : "+student.getAge());
     }
+    
     public static void getAllStudents()
     {
        
@@ -49,8 +52,7 @@ public class SpringRestTemplateClient
             System.out.println("**** All Students ****");
             for (Map<String, Object> map : studentList)
             {
-                System.out.println("Id : id=" + map.get("id") + "   Name=" + map.get("name") + "   Age="
-                        + map.get("age"));
+                System.out.println("Id : id=" + map.get("id") + "   Name=" + map.get("name") +  "   Age="  + map.get("age") );
             }
         } else
         {
@@ -63,7 +65,7 @@ public class SpringRestTemplateClient
     {
         Student student = new Student();
         student.setId(5);
-        student.setName("JIP55");
+        student.setName("Bhami 5 updated");
         student.setAge(55);
         
         HttpHeaders headers = new HttpHeaders();
@@ -81,13 +83,14 @@ public class SpringRestTemplateClient
     }
     public static void main(String args[])
     {
+    	deleteStudent(6);
         createStudent();
         
         getAllStudents();
-        getStudent(2);
+        getStudent(1);
         
         updateStudent();
         
-        deleteStudent(5);
+        
     }
 }

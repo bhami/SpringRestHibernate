@@ -117,7 +117,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>SpringRestHibernate</finalName>
+		<finalName>SpringRestHibernateCRUDAndClient</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
