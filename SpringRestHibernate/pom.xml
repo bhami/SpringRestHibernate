@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0	http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.javainterviewpoint</groupId>
-	<artifactId>SpringRestHibernate</artifactId>
+	<artifactId>SpringRestHibernateCRUDAndClientBhami99</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringRestHibernate Maven Webapp</name>
+	<name>SpringRestHibernate CRUD and Client Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring.version>4.3.6.RELEASE</spring.version>
@@ -117,7 +117,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>SpringRestHibernateCRUDAndClient</finalName>
+		<finalName>SpringRestHibernateCRUDAndClientBhami99</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

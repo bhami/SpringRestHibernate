@@ -13,7 +13,7 @@ import com.javainterviewpoint.model.Student;
 
 public class SpringRestTemplateClient
 {
-    public static final String REST_BASE_URI = "http://localhost:8070/SpringRestHibernateCRUDAndClient";
+    public static final String REST_BASE_URI = "http://localhost:8070/SpringRestHibernateCRUDAndClientBhami99";
    
     static RestTemplate restTemplate = new RestTemplate();
     
